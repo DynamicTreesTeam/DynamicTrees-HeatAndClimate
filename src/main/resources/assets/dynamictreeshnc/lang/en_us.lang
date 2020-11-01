@@ -1,0 +1,11 @@
+item.dynamictreeshnc:lemonseed.name=Lemon Seed
+item.dynamictreeshnc:oliveseed.name=Olive Pit
+item.dynamictreeshnc:morusseed.name=Mulberry Seed
+
+# tile.lemon_leaves.name=Dynamic Lemon Leaves
+# tile.olive_leaves.name=Dynamic Olive Leaves
+# tile.morus_leaves.name=Dynamic Mulberry Leaves
+
+tile.dynamictreeshnc:lemonbranch.name=Lemon Tree
+tile.dynamictreeshnc:olivebranch.name=Olive Tree
+tile.dynamictreeshnc:morusbranch.name=Mulberry Tree

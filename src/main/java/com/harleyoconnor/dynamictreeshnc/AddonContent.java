@@ -6,11 +6,14 @@ import com.ferreusveritas.dynamictrees.api.TreeRegistry;
 import com.ferreusveritas.dynamictrees.api.WorldGenRegistry;
 import com.ferreusveritas.dynamictrees.api.client.ModelHelper;
 import com.ferreusveritas.dynamictrees.api.treedata.ILeavesProperties;
+import com.ferreusveritas.dynamictrees.blocks.BlockDynamicLeaves;
 import com.ferreusveritas.dynamictrees.blocks.LeavesPaging;
 import com.ferreusveritas.dynamictrees.blocks.LeavesProperties;
 import com.ferreusveritas.dynamictrees.items.DendroPotion;
 import com.ferreusveritas.dynamictrees.trees.Species;
 import com.ferreusveritas.dynamictrees.trees.TreeFamily;
+import com.harleyoconnor.dynamictreeshnc.blocks.BlockDynamicLeavesHeatAndClimate;
+import com.harleyoconnor.dynamictreeshnc.trees.TreeLemon;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockLeaves;
 import net.minecraft.client.renderer.block.statemap.StateMap;
@@ -29,12 +32,17 @@ import net.minecraftforge.fml.relauncher.SideOnly;
 import net.minecraftforge.registries.IForgeRegistry;
 
 import java.util.ArrayList;
+import java.util.Collections;
 
 /**
  * @author Harley O'Connor
  */
 @Mod.EventBusSubscriber(modid = AddonConstants.MOD_ID)
 public final class AddonContent {
+
+    public static BlockDynamicLeaves lemonLeaves;
+
+    public static ILeavesProperties lemonLeavesProperties;
 
     public static ArrayList<TreeFamily> trees = new ArrayList<TreeFamily>();
 
@@ -47,7 +55,18 @@ public final class AddonContent {
     public static void registerBlocks(final RegistryEvent.Register<Block> event) {
         IForgeRegistry<Block> registry = event.getRegistry();
 
-        // Collections.addAll(trees);
+        lemonLeaves = new BlockDynamicLeavesHeatAndClimate("leaves_lemon");
+
+        registry.register(lemonLeaves);
+
+        lemonLeavesProperties = setUpLeaves(TreeLemon.primitiveLeavesBlock, "deciduous");
+
+        lemonLeavesProperties.setDynamicLeavesState(lemonLeaves.getDefaultState().withProperty(BlockDynamicLeaves.TREE, 0));
+        lemonLeaves.setProperties(0, lemonLeavesProperties);
+
+        final TreeFamily lemonTree = new TreeLemon();
+
+        Collections.addAll(trees, lemonTree);
 
         trees.forEach(tree -> tree.registerSpecies(Species.REGISTRY));
         ArrayList<Block> treeBlocks = new ArrayList<>();
@@ -60,8 +79,7 @@ public final class AddonContent {
         return new LeavesProperties(
                 primitiveLeavesBlock.getDefaultState(),
                 new ItemStack(primitiveLeavesBlock, 1, 0),
-                TreeRegistry.findCellKit(cellKit))
-        {
+                TreeRegistry.findCellKit(cellKit)) {
             @Override public ItemStack getPrimitiveLeavesItemStack() {
                 return new ItemStack(primitiveLeavesBlock, 1, 0);
             }

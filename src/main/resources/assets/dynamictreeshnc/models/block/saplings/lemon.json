@@ -1,0 +1,8 @@
+{
+  "parent": "dynamictrees:block/sapling",
+  "textures": {
+    "particle": "dcs_climate:blocks/crop/lemon_0",
+    "log": "blocks/log_oak",
+    "leaves": "dcs_climate:blocks/crop/lemon_0"
+  }
+}

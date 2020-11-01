@@ -1,9 +1,9 @@
 {
 	"forge_marker": 1,
-		"defaults": {
+	"defaults": {
 		"transform": "forge:default-block",
-	 "model": "leaves",
-		"textures": { "all": "dcs_climate:blocks/crop/lemon_3" }
+	 	"model": "leaves",
+		"textures": { "all": "dcs_climate:blocks/crop/morus_0" }
 	},
 	"variants": {
 		"tree": {
