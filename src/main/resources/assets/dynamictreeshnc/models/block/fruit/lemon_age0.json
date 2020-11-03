@@ -1,0 +1,7 @@
+{
+    "parent": "dynamictreeshnc:block/fruit/generic/cross_age0",
+    "textures": {
+        "particle": "dynamictreeshnc:blocks/lemon",
+        "apple": "dynamictreeshnc:blocks/lemon"
+    }
+}

@@ -1,0 +1,11 @@
+{
+	"forge_marker": 1,
+	"variants": {
+		"hydro": {
+			"1": {"model": "dynamictreeshnc:datefrond#dynamicpalmfrondshnc"},
+			"2": {"model": "dynamictreeshnc:datefrond#dynamicpalmfrondshnc"},
+			"3": {"model": "dynamictreeshnc:datecoretop"},
+			"4": {"model": "dynamictreeshnc:datecorebottom"}
+		}
+	}
+}

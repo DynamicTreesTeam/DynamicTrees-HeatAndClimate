@@ -1,0 +1,7 @@
+{
+    "parent": "dynamictreeshnc:block/fruit/generic/flower_age0",
+    "textures": {
+        "particle": "dynamictreeshnc:blocks/walnut",
+        "apple": "dynamictreeshnc:blocks/walnut"
+    }
+}

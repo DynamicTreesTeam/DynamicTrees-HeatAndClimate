@@ -2,21 +2,14 @@
 	"forge_marker": 1,
 	"defaults": {
 		"transform": "forge:default-block",
-	 	"model": "leaves",
-		"textures": { "all": "dcs_climate:blocks/crop/morus_0" }
+	 	"model": "leaves"
 	},
 	"variants": {
 		"tree": {
-			"0": {},
-			"1": {},
-			"2": {},
-			"3": {}
-		},
-		"hydro": {
-			"1": {},
-			"2": {},
-			"3": {},
-			"4": {}
+			"0": {"model": "dcs_climate:crop/dcs_leaves_morus1"},
+			"1": {"model": "dcs_climate:crop/dcs_leaves_morus1"},
+			"2": {"model": "dcs_climate:crop/dcs_leaves_morus2"},
+			"3": {"model": "dcs_climate:crop/dcs_leaves_morus3"}
 		}
 	}
 }

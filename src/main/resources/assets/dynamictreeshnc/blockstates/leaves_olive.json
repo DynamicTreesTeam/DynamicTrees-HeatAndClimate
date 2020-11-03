@@ -2,21 +2,14 @@
 	"forge_marker": 1,
 	"defaults": {
 		"transform": "forge:default-block",
-	 	"model": "leaves",
-		"textures": { "all": "dcs_climate:blocks/crop/olive_0" }
+	 	"model": "leaves"
 	},
 	"variants": {
 		"tree": {
-			"0": {},
-			"1": {},
-			"2": {},
-			"3": {}
-		},
-		"hydro": {
-			"1": {},
-			"2": {},
-			"3": {},
-			"4": {}
+			"0": {"model": "dcs_climate:crop/dcs_leaves_olive1"},
+			"1": {"model": "dcs_climate:crop/dcs_leaves_olive1"},
+			"2": {"model": "dcs_climate:crop/dcs_leaves_olive2"},
+			"3": {"model": "dcs_climate:crop/dcs_leaves_olive3"}
 		}
 	}
 }

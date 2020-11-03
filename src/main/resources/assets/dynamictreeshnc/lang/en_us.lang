@@ -1,11 +1,23 @@
 item.dynamictreeshnc:lemonseed.name=Lemon Seed
-item.dynamictreeshnc:oliveseed.name=Olive Pit
+item.dynamictreeshnc:oliveseed.name=Olive Pits
 item.dynamictreeshnc:morusseed.name=Mulberry Seed
+item.dynamictreeshnc:walnutseed.name=Germinated Walnut
+item.dynamictreeshnc:dateseed.name=Date Seed
 
-# tile.lemon_leaves.name=Dynamic Lemon Leaves
-# tile.olive_leaves.name=Dynamic Olive Leaves
-# tile.morus_leaves.name=Dynamic Mulberry Leaves
+species.dynamictreeshnc:lemonseed.name=Lemon
+species.dynamictreeshnc:oliveseed.name=Olive
+species.dynamictreeshnc:morusseed.name=Morus
+species.dynamictreeshnc:walnutseed.name=Walnut
+species.dynamictreeshnc:dateseed.name=Date
+
+tile.lemon_leaves.name=Leaves
+tile.olive_leaves.name=Leaves
+tile.morus_leaves.name=Leaves
+tile.walnut_leaves.name=Leaves
+tile.date_leaves.name=Leaves
 
 tile.dynamictreeshnc:lemonbranch.name=Lemon Tree
 tile.dynamictreeshnc:olivebranch.name=Olive Tree
-tile.dynamictreeshnc:morusbranch.name=Mulberry Tree
+tile.dynamictreeshnc:morusbranch.name=Morus Tree
+tile.dynamictreeshnc:walnutbranch.name=Walnut Tree
+tile.dynamictreeshnc:datebranch.name=Date Palm Tree

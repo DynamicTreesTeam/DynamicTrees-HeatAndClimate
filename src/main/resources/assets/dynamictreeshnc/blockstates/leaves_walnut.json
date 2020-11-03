@@ -1,0 +1,15 @@
+{
+	"forge_marker": 1,
+	"defaults": {
+		"transform": "forge:default-block",
+	 	"model": "leaves"
+	},
+	"variants": {
+		"tree": {
+			"0": {"model": "dcs_climate:crop/dcs_leaves_walnut1"},
+			"1": {"model": "dcs_climate:crop/dcs_leaves_walnut1"},
+			"2": {"model": "dcs_climate:crop/dcs_leaves_walnut2"},
+			"3": {"model": "dcs_climate:crop/dcs_leaves_walnut3"}
+		}
+	}
+}
