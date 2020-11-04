@@ -17,6 +17,7 @@ import com.harleyoconnor.dynamictreeshnc.blocks.BlockDynamicLeavesFruit;
 import com.harleyoconnor.dynamictreeshnc.blocks.BlockDynamicLeavesPalm;
 import com.harleyoconnor.dynamictreeshnc.blocks.BlockFruitPalm;
 import com.harleyoconnor.dynamictreeshnc.trees.*;
+import com.harleyoconnor.dynamictreeshnc.worldgen.BiomeDataBasePopulator;
 import defeatedcrow.hac.main.ClimateMain;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockLeaves;
@@ -26,10 +27,12 @@ import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.crafting.IRecipe;
 import net.minecraft.util.BlockRenderLayer;
+import net.minecraft.util.NonNullList;
 import net.minecraft.util.ResourceLocation;
 import net.minecraft.util.math.AxisAlignedBB;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.IBlockAccess;
+import net.minecraft.world.World;
 import net.minecraftforge.client.event.ModelRegistryEvent;
 import net.minecraftforge.client.model.ModelLoader;
 import net.minecraftforge.common.brewing.BrewingRecipeRegistry;
@@ -63,7 +66,7 @@ public final class AddonContent {
 
     @SubscribeEvent
     public static void registerDataBasePopulators(final WorldGenRegistry.BiomeDataBasePopulatorRegistryEvent event) {
-        // event.register(new BiomeDataBasePopulator());
+        event.register(new BiomeDataBasePopulator());
     }
 
     private static AxisAlignedBB createBox (float radius, float height, float stemLength, float fraction){
@@ -109,6 +112,12 @@ public final class AddonContent {
         }.setDroppedItem(new ItemStack(cropItem, 1, 6));
         registry.register(fruitLemon);
         fruitOlive = new BlockFruit("fruitolive"){
+            @Override
+            public void getDrops(NonNullList<ItemStack> drops, IBlockAccess world, BlockPos pos, IBlockState state, int fortune) {
+                ItemStack toDrop = this.getFruitDrop();
+                toDrop.setCount(1 + ((World)world).rand.nextInt(3));
+                drops.add(toDrop);
+            }
             @Override @SideOnly(Side.CLIENT) public BlockRenderLayer getBlockLayer()
             {
                 return BlockRenderLayer.CUTOUT_MIPPED;

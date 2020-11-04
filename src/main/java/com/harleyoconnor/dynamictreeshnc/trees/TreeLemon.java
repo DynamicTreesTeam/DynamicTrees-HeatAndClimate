@@ -40,6 +40,8 @@ public final class TreeLemon extends TreeFamily {
         public SpeciesLemon(TreeFamily treeFamily) {
             super(treeFamily.getName(), treeFamily, AddonContent.lemonLeavesProperties[0]);
 
+            setSoilLongevity(2);
+
             // Set growing parameters.
             this.setBasicGrowingParameters(0.3F, 12.0F, this.upProbability, this.lowestBranchHeight, 0.9F);
 

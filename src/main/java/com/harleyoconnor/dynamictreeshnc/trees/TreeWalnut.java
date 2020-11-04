@@ -4,6 +4,7 @@ import com.ferreusveritas.dynamictrees.seasons.SeasonHelper;
 import com.ferreusveritas.dynamictrees.systems.dropcreators.DropCreatorSeed;
 import com.ferreusveritas.dynamictrees.systems.featuregen.FeatureGenFlareBottom;
 import com.ferreusveritas.dynamictrees.systems.featuregen.FeatureGenFruit;
+import com.ferreusveritas.dynamictrees.systems.featuregen.FeatureGenMound;
 import com.ferreusveritas.dynamictrees.trees.Species;
 import com.ferreusveritas.dynamictrees.trees.TreeFamily;
 import com.harleyoconnor.dynamictreeshnc.AddonConstants;
@@ -86,9 +87,11 @@ public final class TreeWalnut extends TreeFamily {
 
             addGenFeature(new FeatureGenFruitLeaves(6, 18, AddonContent.walnutLeavesProperties, 0.5f));
 
-            addGenFeature(new FeatureGenFlareBottom());
             AddonContent.fruitWalnut.setSpecies(this);
             addGenFeature(new FeatureGenFruit(AddonContent.fruitWalnut));
+
+            addGenFeature(new FeatureGenFlareBottom());
+            addGenFeature(new FeatureGenMound(999));
         }
 
         @Override

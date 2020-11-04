@@ -24,7 +24,7 @@ public final class DynamicTreesHnC {
     @Mod.EventHandler
     public void preInit(FMLPreInitializationEvent event) {
         logger = event.getModLog();
-        proxy.preInit();
+        proxy.preInit(event);
     }
 
     @Mod.EventHandler

@@ -1,0 +1,76 @@
+[
+  {
+    "select": { "type" : "sandy" },
+    "apply": {
+      "species" : {
+        "method" : "before",
+        "random" : {
+          "dynamictreeshnc:date" : 1,
+          "..." : 20
+        }
+      }
+    }
+  },
+  {
+    "select": { "type" : "plains" },
+    "apply": {
+      "species" : {
+        "method" : "before",
+        "random" : {
+          "dynamictreeshnc:lemon" : 1,
+          "dynamictreeshnc:olive" : 1,
+          "..." : 40
+        }
+      }
+    }
+  },
+  {
+    "select": { "type" : "forest" },
+    "apply": {
+      "species" : {
+        "method" : "before",
+        "random" : {
+          "dynamictreeshnc:walnut" : 1,
+          "..." : 250
+        }
+      }
+    }
+  },
+  {
+    "select": { "type" : "warm" },
+    "apply": {
+      "species" : {
+        "method" : "before",
+        "random" : {
+          "dynamictreeshnc:olive" : 1,
+          "..." : 80
+        }
+      }
+    }
+  },
+  {
+    "select": { "type" : "swamp" },
+    "apply": {
+      "species" : {
+        "method" : "before",
+        "random" : {
+          "dynamictreeshnc:morus" : 1,
+          "..." : 60
+        }
+      }
+    }
+  },
+  {
+    "select": { "type" : "jungle" },
+    "apply": {
+      "species" : {
+        "method" : "before",
+        "random" : {
+          "dynamictreeshnc:morus" : 1,
+          "dynamictreeshnc:date" : 1,
+          "..." : 100
+        }
+      }
+    }
+  }
+]

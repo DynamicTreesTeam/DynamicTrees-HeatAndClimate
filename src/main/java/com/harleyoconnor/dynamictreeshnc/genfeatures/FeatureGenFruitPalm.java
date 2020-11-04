@@ -41,7 +41,7 @@ public class FeatureGenFruitPalm implements IPostGenFeature, IPostGrowFeature {
     public boolean postGrow(World world, BlockPos rootPos, BlockPos treePos, Species species, int soilLife, boolean natural) {
         if((TreeHelper.getRadius(world, rootPos.up()) >= fruitingRadius) && natural && world.rand.nextInt() % 16 == 0) {
             if(species.seasonalFruitProductionFactor(world, rootPos) > world.rand.nextFloat()) {
-                addFruit(world, rootPos, getLeavesHeight(rootPos, world), false);
+                addFruit(world, rootPos, getLeavesHeight(rootPos, world), false, null);
             }
         }
         return false;
@@ -63,22 +63,23 @@ public class FeatureGenFruitPalm implements IPostGenFeature, IPostGrowFeature {
         int qty = 8;
         qty *= species.seasonalFruitProductionFactor(world, rootPos);
         for (int i=0;i<qty;i++){
-            if(world.rand.nextInt() % 4 == 0) {
-                addFruit(world, rootPos, getLeavesHeight(rootPos, world),true);
+            if(world.rand.nextInt(6) == 0) {
+                BlockPos h = getLeavesHeight(rootPos, world);
+                addFruit(world, rootPos, h,true, safeBounds);
                 placed = true;
             }
         }
         return placed;
     }
 
-    private void addFruit(World world, BlockPos rootPos, BlockPos leavesPos, boolean worldGen) {
+    private void addFruit(World world, BlockPos rootPos, BlockPos leavesPos, boolean worldGen, SafeChunkBounds safeBounds) {
         if (rootPos.getY() == leavesPos.getY()){
             return;
         }
         EnumFacing placeDir = EnumFacing.HORIZONTALS[world.rand.nextInt(4)];
         leavesPos = leavesPos.down(); //we move the pos down so the fruit can stick to the trunk
-        if (world.isAirBlock(leavesPos.offset(placeDir))){
-            world.setBlockState(leavesPos.offset(placeDir), fruitPod.getDefaultState().withProperty(BlockFruitPalm.FACING, placeDir.getOpposite()).withProperty(BlockFruitPalm.AGE, worldGen?(world.rand.nextInt(3)):0));
+        if ((safeBounds == null || safeBounds.inBounds(leavesPos.offset(placeDir), true)) && world.isAirBlock(leavesPos.offset(placeDir))){
+            world.setBlockState(leavesPos.offset(placeDir), fruitPod.getDefaultState().withProperty(BlockFruitPalm.FACING, placeDir.getOpposite()).withProperty(BlockFruitPalm.AGE, worldGen?(1+world.rand.nextInt(3)):0));
         }
 
     }

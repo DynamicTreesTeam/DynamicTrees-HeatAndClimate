@@ -9,6 +9,7 @@ import com.harleyoconnor.dynamictreeshnc.AddonContent;
 import com.harleyoconnor.dynamictreeshnc.models.ModelLoaderBlockPalmFronds;
 import net.minecraft.block.Block;
 import net.minecraftforge.client.model.ModelLoaderRegistry;
+import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 
 /**
  * @author Harley O'Connor
@@ -16,8 +17,8 @@ import net.minecraftforge.client.model.ModelLoaderRegistry;
 public final class ClientProxy extends CommonProxy {
 
     @Override
-    public void preInit() {
-        super.preInit();
+    public void preInit(FMLPreInitializationEvent event) {
+        super.preInit(event);
         ModelLoaderRegistry.registerLoader(new ModelLoaderBlockPalmFronds());
     }
 

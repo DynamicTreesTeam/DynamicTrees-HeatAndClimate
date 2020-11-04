@@ -1,6 +1,7 @@
 package com.harleyoconnor.dynamictreeshnc.blocks;
 
 import com.ferreusveritas.dynamictrees.blocks.BlockDynamicLeaves;
+import com.harleyoconnor.dynamictreeshnc.AddonConfigs;
 import defeatedcrow.hac.main.ClimateMain;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.client.Minecraft;
@@ -45,6 +46,7 @@ public final class BlockDynamicLeavesFruit extends BlockDynamicLeaves {
         this.setRegistryName("dynamictreeshnc", registryName);
         this.setUnlocalizedName(registryName);
         leafFruitType = type;
+        needsRandomTick = AddonConfigs.fruityLeaves;
     }
 
     public static void addEntityBiodustFX(World world, double x, double y, double z, int ammount) {
