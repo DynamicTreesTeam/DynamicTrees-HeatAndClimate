@@ -5,3 +5,5 @@ Dynamic Trees compatibility add-on for Heat and Climate currently in the works. 
 - Lemon
 - Morus
 - Olive
+- Walnut
+- Date

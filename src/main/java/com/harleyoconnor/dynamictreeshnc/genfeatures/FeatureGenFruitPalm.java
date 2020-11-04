@@ -42,6 +42,7 @@ public class FeatureGenFruitPalm implements IPostGenFeature, IPostGrowFeature {
         if((TreeHelper.getRadius(world, rootPos.up()) >= fruitingRadius) && natural && world.rand.nextInt() % 16 == 0) {
             if(species.seasonalFruitProductionFactor(world, rootPos) > world.rand.nextFloat()) {
                 addFruit(world, rootPos, getLeavesHeight(rootPos, world), false, null);
+                return true;
             }
         }
         return false;

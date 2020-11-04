@@ -15,6 +15,8 @@ import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.IBlockAccess;
 import net.minecraft.world.World;
 
+import javax.annotation.Nullable;
+
 public class BlockFruitPalm extends BlockFruit {
 
     public BlockFruitPalm (String name){
@@ -75,6 +77,12 @@ public class BlockFruitPalm extends BlockFruit {
     @Override
     protected BlockStateContainer createBlockState() {
         return new BlockStateContainer(this, AGE, FACING);
+    }
+
+    @Nullable
+    @Override
+    public AxisAlignedBB getCollisionBoundingBox(IBlockState state, IBlockAccess worldIn, BlockPos pos) {
+        return NULL_AABB;
     }
 
     @Override
