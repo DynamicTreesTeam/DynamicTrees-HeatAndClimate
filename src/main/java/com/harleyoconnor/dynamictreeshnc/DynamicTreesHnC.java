@@ -13,7 +13,7 @@ import org.apache.logging.log4j.Logger;
  *
  * @author Harley O'Connor
  */
-@Mod(modid = AddonConstants.MOD_ID, name = AddonConstants.MOD_NAME, version = AddonConstants.VERSION, dependencies = AddonConstants.DEPENDENCIES)
+@Mod(modid = AddonConstants.MOD_ID, name = AddonConstants.MOD_NAME, version = AddonConstants.VERSION, dependencies = AddonConstants.DEPENDENCIES, updateJSON = "https://github.com/Harleyoc1/DynamicTreesVersionInfo/blob/master/Add-ons/HeatAndClimate.json?raw=true")
 public final class DynamicTreesHnC {
 
     @SidedProxy(clientSide = "com.harleyoconnor.dynamictreeshnc.proxy.ClientProxy", serverSide = "com.harleyoconnor.dynamictreeshnc.proxy.CommonProxy")
