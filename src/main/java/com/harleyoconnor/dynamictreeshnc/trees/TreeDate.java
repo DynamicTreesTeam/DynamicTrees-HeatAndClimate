@@ -36,6 +36,7 @@ import net.minecraft.util.math.MathHelper;
 import net.minecraft.world.IBlockAccess;
 import net.minecraft.world.World;
 import net.minecraft.world.biome.Biome;
+import net.minecraftforge.common.BiomeDictionary;
 import net.minecraftforge.common.property.IExtendedBlockState;
 import net.minecraftforge.fml.common.registry.ForgeRegistries;
 
@@ -59,6 +60,10 @@ public class TreeDate extends TreeFamily {
 			setBasicGrowingParameters(0.5f, 8.0f, 4, 3, 0.8f);
 
 			generateSeed();
+
+			this.envFactor(BiomeDictionary.Type.COLD, 0.85F);
+			this.envFactor(BiomeDictionary.Type.HOT, 1.1F);
+			this.envFactor(BiomeDictionary.Type.DRY, 1.1F);
 
 			setFlowerSeasonHold(fruitingOffset - 0.5f, fruitingOffset + 0.5f);
 

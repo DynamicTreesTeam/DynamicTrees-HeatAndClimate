@@ -46,8 +46,8 @@ public final class TreeLemon extends TreeFamily {
             this.setBasicGrowingParameters(0.3F, 12.0F, this.upProbability, this.lowestBranchHeight, 0.9F);
 
             // Setup environment factors.
-            this.envFactor(BiomeDictionary.Type.HOT, 1.1F);
-            this.envFactor(BiomeDictionary.Type.DRY, 1.2F);
+            this.envFactor(BiomeDictionary.Type.HOT, 0.9F);
+            this.envFactor(BiomeDictionary.Type.DRY, 0.9F);
 
             // Setup seed.
             this.generateSeed();
