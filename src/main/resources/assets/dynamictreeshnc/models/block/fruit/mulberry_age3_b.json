@@ -11,6 +11,19 @@
 			"to": [7.8, 14, 10.6],
 			"rotation": {"angle": 0, "axis": "y", "origin": [8.2, 7, 7.8]},
 			"faces": {
+				"north": {"uv": [8, 8, 11, 13], "texture": "#apple"},
+				"east": {"uv": [8, 8, 11, 13], "texture": "#apple"},
+				"south": {"uv": [8, 8, 11, 13], "texture": "#apple"},
+				"west": {"uv": [8, 8, 11, 13], "texture": "#apple"},
+				"up": {"uv": [8, 0, 11, 3], "texture": "#apple"},
+				"down": {"uv": [8, 13, 11, 16], "texture": "#apple"}
+			}
+		},
+		{
+			"from": [5.8, 9.6, 5.4],
+			"to": [8.2, 13.6, 7.8],
+			"rotation": {"angle": 0, "axis": "y", "origin": [8.6, 6.6, 5.8]},
+			"faces": {
 				"north": {"uv": [8, 3, 11, 8], "texture": "#apple"},
 				"east": {"uv": [8, 3, 11, 8], "texture": "#apple"},
 				"south": {"uv": [8, 3, 11, 8], "texture": "#apple"},
@@ -20,29 +33,16 @@
 			}
 		},
 		{
-			"from": [5.8, 9.6, 5.4],
-			"to": [8.2, 13.6, 7.8],
-			"rotation": {"angle": 0, "axis": "y", "origin": [8.6, 6.6, 5.8]},
-			"faces": {
-				"north": {"uv": [8, 8, 11, 13], "texture": "#apple"},
-				"east": {"uv": [8, 8, 11, 13], "texture": "#apple"},
-				"south": {"uv": [8, 8, 11, 13], "texture": "#apple"},
-				"west": {"uv": [8, 8, 11, 13], "texture": "#apple"},
-				"up": {"uv": [8, 0, 11, 3], "texture": "#apple"},
-				"down": {"uv": [8, 13, 11, 16], "texture": "#apple"}
-			}
-		},
-		{
 			"from": [8.2, 10.4, 6.6],
 			"to": [10.6, 14.4, 9],
 			"rotation": {"angle": 0, "axis": "y", "origin": [10.2, 7.4, 6.2]},
 			"faces": {
-				"north": {"uv": [8, 8, 11, 13], "texture": "#apple"},
-				"east": {"uv": [8, 8, 11, 13], "texture": "#apple"},
-				"south": {"uv": [8, 8, 11, 13], "texture": "#apple"},
-				"west": {"uv": [8, 8, 11, 13], "texture": "#apple"},
-				"up": {"uv": [8, 0, 11, 3], "texture": "#apple"},
-				"down": {"uv": [8, 13, 11, 16], "texture": "#apple"}
+				"north": {"uv": [8, 3, 11, 8], "texture": "#apple"},
+				"east": {"uv": [8, 3, 11, 8], "texture": "#apple"},
+				"south": {"uv": [8, 3, 11, 8], "texture": "#apple"},
+				"west": {"uv": [8, 3, 11, 8], "texture": "#apple"},
+				"up": {"uv": [12, 10, 15, 13], "texture": "#apple"},
+				"down": {"uv": [12, 13, 15, 16], "texture": "#apple"}
 			}
 		},
 		{

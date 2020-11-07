@@ -141,8 +141,8 @@ public final class AddonContent {
             protected final AxisAlignedBB[] FRUIT_AABB = new AxisAlignedBB[] {
                     createBox(1,1,0, 16),
                     createBox(2,3,0, 20),
-                    createBox(3.3f,4,1, 20),
-                    createBox(3.3f,4,2, 20)
+                    createBox(3.3f,6,1, 20),
+                    createBox(3.3f,6,2, 20)
             };
             @Override public AxisAlignedBB getBoundingBox(IBlockState state, IBlockAccess source, BlockPos pos) {
                 return FRUIT_AABB[state.getValue(AGE)];
