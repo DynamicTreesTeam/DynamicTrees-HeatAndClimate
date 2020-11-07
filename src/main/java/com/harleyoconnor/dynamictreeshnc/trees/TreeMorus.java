@@ -108,7 +108,7 @@ public final class TreeMorus extends TreeFamily {
     }
 
     public TreeMorus() {
-        super(new ResourceLocation(AddonConstants.MOD_ID, "morus"));
+        super(new ResourceLocation(AddonConstants.MOD_ID, AddonConstants.MORUS_TREE));
 
         this.setPrimitiveLog(Blocks.LOG.getStateFromMeta(0));
         for (int i=0;i<4;i++) AddonContent.morusLeavesProperties[i].setTree(this);

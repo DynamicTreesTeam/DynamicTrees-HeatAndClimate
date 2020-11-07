@@ -118,7 +118,7 @@ public final class TreeWalnut extends TreeFamily {
     }
 
     public TreeWalnut() {
-        super(new ResourceLocation(AddonConstants.MOD_ID, "walnut"));
+        super(new ResourceLocation(AddonConstants.MOD_ID, AddonConstants.WALNUT_TREE));
 
         this.setPrimitiveLog(Blocks.LOG.getStateFromMeta(0));
         for (int i=0;i<4;i++) AddonContent.walnutLeavesProperties[i].setTree(this);

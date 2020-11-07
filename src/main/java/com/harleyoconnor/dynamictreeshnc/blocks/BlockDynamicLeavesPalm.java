@@ -23,6 +23,7 @@ import net.minecraftforge.fml.relauncher.SideOnly;
 
 import java.util.Random;
 
+@SuppressWarnings("deprecation")
 public class BlockDynamicLeavesPalm extends BlockDynamicLeaves {
 
     public static final Surround[][] hydroSurroundMap = new Surround[][] {

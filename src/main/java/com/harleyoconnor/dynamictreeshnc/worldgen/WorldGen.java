@@ -27,14 +27,14 @@ public class WorldGen implements IWorldGenerator {
 
         Biome biome = world.getBiomeForCoordsBody(pos);
 
-        if (    world.rand.nextFloat() <= AddonConfigs.teaSpawnChance &&
+        if (world.rand.nextFloat() <= AddonConfigs.teaSpawnChance &&
                 (BiomeDictionary.hasType(biome, BiomeDictionary.Type.MOUNTAIN) || BiomeDictionary.hasType(biome, BiomeDictionary.Type.HILLS)) &&
                 DirtHelper.isSoilAcceptable(world.getBlockState(pos).getBlock(), DirtHelper.getSoilFlags(DirtHelper.DIRTLIKE))) {
 
             world.setBlockState(pos.up(), FoodInit.leavesTea.getDefaultState());
         }
 
-        if (    world.rand.nextFloat() <= AddonConfigs.wisteriaSpawnChance &&
+        if (world.rand.nextFloat() <= AddonConfigs.wisteriaSpawnChance &&
                 (BiomeDictionary.hasType(biome, BiomeDictionary.Type.FOREST) && BiomeDictionary.hasType(biome, BiomeDictionary.Type.WET)) &&
                 DirtHelper.isSoilAcceptable(world.getBlockState(pos).getBlock(), DirtHelper.getSoilFlags(DirtHelper.DIRTLIKE))) {
 

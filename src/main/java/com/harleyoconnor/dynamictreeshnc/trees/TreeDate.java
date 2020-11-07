@@ -195,7 +195,7 @@ public class TreeDate extends TreeFamily {
 	}
 
 	public TreeDate() {
-		super(new ResourceLocation(AddonConstants.MOD_ID, "date"));
+		super(new ResourceLocation(AddonConstants.MOD_ID, AddonConstants.DATE_TREE));
 
 		setPrimitiveLog(Blocks.LOG.getStateFromMeta(3));
 

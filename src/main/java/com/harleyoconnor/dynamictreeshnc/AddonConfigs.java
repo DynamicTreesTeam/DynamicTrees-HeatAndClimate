@@ -1,35 +1,33 @@
 package com.harleyoconnor.dynamictreeshnc;
 
 
+import net.minecraftforge.common.config.Config;
 import net.minecraftforge.common.config.Configuration;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 
 import java.io.File;
 
+@Config(modid = AddonConstants.MOD_ID)
 public class AddonConfigs {
-	
-	public static File configDirectory;
 
-	public static float teaSpawnChance;
-	public static float wisteriaSpawnChance;
-	public static boolean useHeatAndClimateSeasons;
-	public static boolean fruityLeaves;
-	
-	public static void preInit(FMLPreInitializationEvent event) {
-		
-		configDirectory = event.getModConfigurationDirectory();
-		
-		Configuration config = new Configuration(event.getSuggestedConfigurationFile());
-		config.load();
-		
-		//World
-		teaSpawnChance = config.getFloat("teaSpawnChance", "world", 0.05f, 0f, 1f, "Chance for Tea plants to spawn per chunk in Hill biomes.");
-		wisteriaSpawnChance = config.getFloat("wisteriaSpawnChance", "world", 0.2f, 0f, 1f, "Chance for Wisteria plants to spawn per chunk in Hill biomes.");
-		useHeatAndClimateSeasons = config.getBoolean("useHeatAndClimateSeasons", "world", true, "Allows Dynamic Trees to use the Heat and Climate seasons. (Overrides Serene Seasons' if installed)");
+	@Config.Comment("Chance for Tea plants to spawn per chunk in Hill biomes.")
+	@Config.Name("Tea Spawn Chance")
+	@Config.RangeDouble(min = 0.0, max = 1.0)
+	public static double teaSpawnChance = 0.05;
 
-		//Fruit
-		fruityLeaves = config.getBoolean("fruityLeaves", "fruit", true, "Allows leaves to grow fruit on their own, like the non-dynamic versions. (on addition to the Dynamic Trees fruit blocks)");
+	@Config.Comment("Chance for Wisteria plants to spawn per chunk in Hill biomes.")
+	@Config.Name("Wisteria Spawn Chance")
+	@Config.RangeDouble(min = 0.0, max = 1.0)
+	public static double wisteriaSpawnChance = 0.2;
 
-		config.save();
-	}
+	@Config.Comment("Allows Dynamic Trees to use the Heat and Climate seasons (overrides Serene Seasons' if installed).")
+	@Config.Name("Use Heat and Climate Seasons")
+	@Config.RequiresMcRestart()
+	public static boolean useHeatAndClimateSeasons = true;
+
+	@Config.Comment("Allows leaves to grow fruit on their own, like the non-dynamic versions (in addition to the Dynamic Trees fruit blocks).")
+	@Config.Name("Fruity Leaves")
+	@Config.RequiresMcRestart()
+	public static boolean fruityLeaves = true;
+
 }

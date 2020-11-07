@@ -112,7 +112,7 @@ public final class TreeLemon extends TreeFamily {
     }
 
     public TreeLemon() {
-        super(new ResourceLocation(AddonConstants.MOD_ID, "lemon"));
+        super(new ResourceLocation(AddonConstants.MOD_ID, AddonConstants.LEMON_TREE));
 
         this.setPrimitiveLog(Blocks.LOG.getStateFromMeta(0));
         for (int i=0;i<4;i++) AddonContent.lemonLeavesProperties[i].setTree(this);

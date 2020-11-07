@@ -108,7 +108,7 @@ public final class TreeOlive extends TreeFamily {
     }
 
     public TreeOlive() {
-        super(new ResourceLocation(AddonConstants.MOD_ID, "olive"));
+        super(new ResourceLocation(AddonConstants.MOD_ID, AddonConstants.OLIVE_TREE));
 
         this.setPrimitiveLog(Blocks.LOG.getStateFromMeta(0));
         for (int i=0;i<4;i++) AddonContent.oliveLeavesProperties[i].setTree(this);

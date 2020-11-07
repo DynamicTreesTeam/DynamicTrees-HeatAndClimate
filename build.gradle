@@ -35,7 +35,7 @@ minecraft {
 }
 
 dependencies {
-    compile files("libs/DynamicTrees-1.12.2-0.9.14")
+    compile files("libs/DynamicTrees-1.12.2-0.9.20")
     compile files("libs/HeatAndClimateMod_1.12.2-3.3.16")
     compile files("libs/HeatAndClimateLib_1.12.2-3.4.0")
 }
