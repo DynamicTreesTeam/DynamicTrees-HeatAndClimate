@@ -1,6 +1,5 @@
 package com.harleyoconnor.dynamictreeshnc;
 
-
 import net.minecraftforge.common.config.Config;
 import net.minecraftforge.common.config.Configuration;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
@@ -15,7 +14,7 @@ public class AddonConfigs {
 	@Config.RangeDouble(min = 0.0, max = 1.0)
 	public static double teaSpawnChance = 0.05;
 
-	@Config.Comment("Chance for Wisteria plants to spawn per chunk in Hill biomes.")
+	@Config.Comment("Chance for Wisteria plants to spawn per chunk in Wet Forest biomes.")
 	@Config.Name("Wisteria Spawn Chance")
 	@Config.RangeDouble(min = 0.0, max = 1.0)
 	public static double wisteriaSpawnChance = 0.2;

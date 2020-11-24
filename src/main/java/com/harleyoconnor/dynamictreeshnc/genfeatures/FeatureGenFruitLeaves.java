@@ -50,11 +50,17 @@ public class FeatureGenFruitLeaves implements IPostGenFeature, IPostGrowFeature 
         return true;
     }
 
+    private float getSeasonValue(World world){
+        Float value = SeasonHelper.getSeasonValue(world);
+        if (value == null) return 1;
+        return value;
+    }
+
     private void attemptLeafChange(World world, BlockPos pos, boolean worldGen, Species species, SafeChunkBounds safeBounds){
         if (worldGen && safeBounds.inBounds(pos, true)){
             if (world.getBlockState(pos).getBlock() == leaf && world.rand.nextFloat() <= species.seasonalFruitProductionFactor(world, pos)){
                 int age = world.rand.nextInt(4);
-                if (species.testFlowerSeasonHold(world, pos, SeasonHelper.getSeasonValue(world))) age = Math.max(age, 2);
+                if (species.testFlowerSeasonHold(world, pos, getSeasonValue(world))) age = Math.max(age, 2);
                 world.setBlockState(pos, leaf.getDefaultState().withProperty(BlockDynamicLeaves.TREE,  age));
             }
         }
@@ -73,7 +79,7 @@ public class FeatureGenFruitLeaves implements IPostGenFeature, IPostGrowFeature 
                         world.setBlockState(pos, leaf.getDefaultState().withProperty(BlockDynamicLeaves.TREE, 2));
                         break;
                     case 2:
-                        if (!species.testFlowerSeasonHold(world, pos, SeasonHelper.getSeasonValue(world)))
+                        if (!species.testFlowerSeasonHold(world, pos, getSeasonValue(world)))
                             world.setBlockState(pos, leaf.getDefaultState().withProperty(BlockDynamicLeaves.TREE, 3));
                         break;
                 }
