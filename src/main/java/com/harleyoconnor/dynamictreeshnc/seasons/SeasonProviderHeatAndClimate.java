@@ -13,8 +13,8 @@ public class SeasonProviderHeatAndClimate implements ISeasonProvider {
     private float seasonValue = 1f;
 
     @Override
-    public Float getSeasonValue(World world) {
-            return seasonValue;
+    public Float getSeasonValue(World world, BlockPos blockPos) {
+        return seasonValue;
     }
 
     @Override

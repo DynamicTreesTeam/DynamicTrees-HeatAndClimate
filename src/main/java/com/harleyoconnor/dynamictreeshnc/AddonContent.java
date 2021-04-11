@@ -187,7 +187,7 @@ public final class AddonContent {
         ArrayList<Block> treeBlocks = new ArrayList<>();
         trees.forEach(tree -> tree.getRegisterableBlocks(treeBlocks));
         treeBlocks.addAll(LeavesPaging.getLeavesMapForModId(AddonConstants.MOD_ID).values());
-        registry.registerAll(treeBlocks.toArray(new Block[treeBlocks.size()]));
+        registry.registerAll(treeBlocks.toArray(new Block[0]));
     }
 
     public static ILeavesProperties setUpLeaves (Block primitiveLeavesBlock, String cellKit){
@@ -207,7 +207,7 @@ public final class AddonContent {
 
         ArrayList<Item> treeItems = new ArrayList<>();
         trees.forEach(tree -> tree.getRegisterableItems(treeItems));
-        registry.registerAll(treeItems.toArray(new Item[treeItems.size()]));
+        registry.registerAll(treeItems.toArray(new Item[0]));
     }
 
     @SubscribeEvent

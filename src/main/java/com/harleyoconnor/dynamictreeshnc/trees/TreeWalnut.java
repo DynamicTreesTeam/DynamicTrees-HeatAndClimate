@@ -39,6 +39,8 @@ public final class TreeWalnut extends TreeFamily {
         public SpeciesLemon(TreeFamily treeFamily) {
             super(treeFamily.getName(), treeFamily, AddonContent.walnutLeavesProperties[0]);
 
+            addValidLeavesBlocks(AddonContent.walnutLeavesProperties);
+
             // Set growing parameters.
             this.setBasicGrowingParameters(0.3F, 14.0F, this.upProbability, 4, 0.9F);
 

@@ -39,6 +39,8 @@ public final class TreeOlive extends TreeFamily {
 
             setSoilLongevity(2);
 
+            addValidLeavesBlocks(AddonContent.oliveLeavesProperties);
+
             // Set growing parameters.
             this.setBasicGrowingParameters(0.3F, 12.0F, this.upProbability, this.lowestBranchHeight, 0.9F);
 
